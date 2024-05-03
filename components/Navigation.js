@@ -1,8 +1,9 @@
 import { navLinks } from "@/utils/api/links"
 import Link from "next/link"
 
+
 export default function Navigation () {
-    return (
+    return ( 
         <nav>
             <ul>
                 {navLinks.map((link, index) => {
