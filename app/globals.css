@@ -6,3 +6,12 @@
 html {
   scroll-behavior: smooth;
 }
+
+.custom-container {
+  padding: 0 8.75rem;
+}
+
+.logo svg {
+  fill: #fff;
+  width: 4.375rem;
+}
