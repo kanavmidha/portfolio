@@ -12,16 +12,7 @@ export const metadata = {
   description: 'An enthusiastic freelancer web developer and designer based in Canada looking for opportunities across Canada.',
   icons: [
     {
-      
       url: '/favicon.png',
-      media: '(prefers-color-scheme: light)',
-      rel: 'icon',
-      type: 'image/png',
-    },
-    {
-     
-      url: '/favicon-dark.png',
-      media: '(prefers-color-scheme: dark)',
       rel: 'icon',
       type: 'image/png',
     }
@@ -46,12 +37,12 @@ export default function Home() {
           <p>&copy; Kanav Midha</p>
           <p>2024</p>
         </div> */}
-        <section className="px-8">
-          <h2 className="text-[3rem] uppercase font-serif text-center mt-[6rem] max-w-[33.12rem] mx-auto sm:text-[4rem]">Hi There, I'm <span className="w-fit inline-block ml-2"><svg className="w-9 sm:w-11 fill-white hidden xs:block" viewBox="0 0 64 64"><g><g><path d="M34.29,0H29.71V26.48L11,7.76,7.76,11,26.48,29.71H0v4.58H26.48L7.76,53,11,56.24,29.71,37.52V64h4.58V37.52L53,56.24,56.24,53,37.52,34.29H64V29.71H37.52L56.24,11,53,7.76,34.29,26.48Z" /></g></g></svg></span> Kanav Midha</h2>
+        <section className="px-8 pt-[14rem] md:h-dvh">
+          <h2 className="text-[3rem] uppercase font-serif text-center max-w-[33.12rem] mx-auto sm:text-[4rem] lg:text-[6rem] lg:max-w-[50rem]">Hi There, I'm <span className="w-fit inline-block ml-2"><svg className="w-9 sm:w-11 lg:w-16 fill-white hidden xs:block" viewBox="0 0 64 64"><g><g><path d="M34.29,0H29.71V26.48L11,7.76,7.76,11,26.48,29.71H0v4.58H26.48L7.76,53,11,56.24,29.71,37.52V64h4.58V37.52L53,56.24,56.24,53,37.52,34.29H64V29.71H37.52L56.24,11,53,7.76,34.29,26.48Z" /></g></g></svg></span> Kanav Midha</h2>
           <span className="absolute hidden">scroll to find out your brand solution</span>
         </section>
 
-        <section id="services" className="rounded-[2rem] bg-beige mt-8 px-8 text-black py-8">
+        <section id="services" className="rounded-[2rem] bg-beige mt-8 px-8 sm:px-14 lg:px-20 text-black py-8">
           <h2 className="text-[2.5rem] font-serif uppercase">What I do.</h2>
           <div className="mt-6">
             <h3 className="text-[2rem] font-serif mb-3"><span className="mr-2">01.</span> Web Development</h3>
@@ -109,7 +100,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="about" className="py-8 px-8 text-beige">
+        <section id="about" className="py-8 px-8 sm:px-14 lg:px-20 text-beige">
           <h2 className="text-[2.5rem] font-serif uppercase mb-3">A little about me.</h2>
           <p className="text-lg mb-6">I aspire to provide digital design solutions for a diverse group including startups and well-known businesses.  With a passion for Design and Development, I take projects from ideation to production. Bringing websites to life and to more audience is my goal.</p>
 

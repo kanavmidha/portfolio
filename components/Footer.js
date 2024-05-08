@@ -3,10 +3,10 @@ import Navigation from "./Navigation"
 
 export default function Footer () {
     return (
-        <footer className="bg-beige text-black px-8 py-8">
-            <div className=" flex flex-col items-center max-xs:max-w-[25rem] sm:max-w-[37.75rem] mx-auto">
+        <footer className="bg-beige text-black px-8 py-8 sm:px-14 lg:px-20">
+            <div className=" flex flex-col items-center max-xs:max-w-[25rem] sm:max-w-[37.75rem] md:max-w-[50rem] lg:max-w-[60rem] mx-auto">
                 <span className="text-center text-lg">Want to take your brand to the modern era?</span>
-                <Link href={'/contact'} className="text-[2.5rem] text-center font-serif underline xs:text-[4rem] sm:text-[6rem]">Get in touch</Link>
+                <Link href={'/contact'} className="text-[2.5rem] text-center font-serif underline xs:text-[4rem] sm:text-[6rem] md:text-[7rem] lg:text-[9rem]">Get in touch</Link>
                 <span className="text-lg w-fit ml-auto block">with me!</span>
             </div>
             
