@@ -8,14 +8,16 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    colors: {
-      'jet': '#2A2A2A',
-      'night': '#0F0F0F',
-      'beige': '#F7EDD0',
-      'off-white': '#D9D4AD',
-      'white': '#ffffff'
-    },
     extend: {
+      screens:{
+        'xs': '430px'
+      },
+      colors: {
+        'jet': '#2A2A2A',
+        'night': '#0F0F0F',
+        'beige': '#F7EDD0',
+        'off-white': '#D9D4AD',
+      },
       fontFamily: {
         sans: ['var(--font-archivo)'],
         serif: ['var(--font-clash)']

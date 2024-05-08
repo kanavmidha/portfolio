@@ -1,5 +1,5 @@
 import "./globals.css";
-import { Archivo } from 'next/font/google';
+import {Archivo} from 'next/font/google';
 import localFont from 'next/font/local';
 
 const archivo = Archivo({

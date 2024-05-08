@@ -9,7 +9,7 @@ export default function Navigation () {
                 {navLinks.map((link, index) => {
                     return (
                         <li key={index}>
-                            <Link href={link.url}>{link.title}</Link>
+                            <Link href={link.url} className="text-lg">{link.title}</Link>
                         </li>
                     )
                 })}
