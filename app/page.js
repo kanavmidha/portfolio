@@ -44,57 +44,53 @@ export default function Home() {
 
         <section id="services" className="rounded-[2rem] bg-beige mt-8 px-8 sm:px-14 lg:px-20 text-black py-8">
           <h2 className="text-[2.5rem] font-serif uppercase">What I do.</h2>
-          <div className="mt-6">
-            <h3 className="text-[2rem] font-serif mb-3"><span className="mr-2">01.</span> Web Development</h3>
-            <div className="sm:flex justify-between">
-              <p className="mb-3 text-lg sm:w-[40%]">I create custom-coded websites as unique as your brand. I focus on usability, scalability, performance and accessibility to tailor the website to your specific brand needs.</p>
-              <div className=" flex flex-col gap-3">
+          <div className="mt-6 sm:grid grid-cols-10">
+            <h3 className="text-[2rem] font-serif mb-3 col-span-full"><span className="mr-2">01.</span> Web Development</h3>
+              <p className="mb-3 text-lg col-span-5 md:col-span-4">I create custom-coded websites as unique as your brand. I focus on usability, scalability, performance and accessibility to tailor the website to your specific brand needs.</p>
+              <div className=" flex flex-col gap-3 col-end-[-1] col-span-3">
                 <span className="block text-[1.5rem] font-serif">Databases</span>
                 <span className="block text-[1.5rem] font-serif">CMS Integration</span>
                 <span className="block text-[1.5rem] font-serif">Motion & Animations</span>
               </div>
-            </div>
           </div>
           
-          <div className="mt-6">
-            <h3 className="text-[2rem] font-serif mb-3"><span className="mr-2">02.</span> Web Design</h3>
-            <div className="sm:flex justify-between">
-              <p className="mb-3 text-lg sm:w-[40%]">Your website wants to be alive, I got you covered! I create awe-inspiring designs for your business to give it a new life. I focus on modern design principles to tailor your website to current trends that help it reach to a greater audience.</p>
-              <div className=" flex flex-col gap-3">
+          <div className="mt-6 sm:grid grid-cols-10">
+            <h3 className="text-[2rem] font-serif mb-3 col-span-full"><span className="mr-2">02.</span> Web Design</h3>
+              <p className="mb-3 text-lg col-span-5 md:col-span-4">Your website wants to be alive, I got you covered! I create awe-inspiring designs for your business to give it a new life. I focus on modern design principles to tailor your website to current trends that help it reach to a greater audience.</p>
+              <div className=" flex flex-col gap-3 col-end-[-1] col-span-3">
                 <span className="block text-[1.5rem] font-serif">UI/UX</span>
                 <span className="block text-[1.5rem] font-serif">User Research</span>
                 <span className="block text-[1.5rem] font-serif">Responsive Design</span>
               </div>
-            </div>
           </div>
 
-          <div className="mt-6">
-            <h3 className="text-[2rem] font-serif mb-3"><span className="mr-2">03.</span> SEO</h3>
-            <div className="sm:flex justify-between">
-              <p className="mb-3 text-lg sm:w-[40%]">Your website also wants to be popular. I got you covered, again! SEO is very important for a website to reach audience, hence, I incorporate the best SEO practices making your brand gain more user traffic.</p>
-              <div className=" flex flex-col gap-3">
+          <div className="mt-6 sm:grid grid-cols-10">
+            <h3 className="text-[2rem] font-serif mb-3 col-span-full"><span className="mr-2">03.</span> SEO</h3>
+              <p className="mb-3 text-lg col-span-5 md:col-span-4">Your website also wants to be popular. I got you covered, again! SEO is very important for a website to reach audience, hence, I incorporate the best SEO practices making your brand gain more user traffic.</p>
+              <div className=" flex flex-col gap-3 col-end-[-1] col-span-3">
                 <span className="block text-[1.5rem] font-serif">Technical SEO</span>
                 <span className="block text-[1.5rem] font-serif">Page Optimization</span>
                 <span className="block text-[1.5rem] font-serif">SEO Audits & Analytics</span>
               </div>
-            </div>
           </div>
           <div className="mt-8">
-            <h2 className="font-serif uppercase text-[2.5rem]">My Works.</h2>
+            <h2 className="font-serif uppercase text-[2.5rem] col-span-full">My Works.</h2>
             {works.map((work, index) => {
               return (
-                <WorksLayout
-                  a="mt-6"
-                  image="rounded-[1rem] mt-6 mx-auto"
-                  h3="text-[2rem] font-serif mt-3"
-                  p=""
-                  link={work.link}
-                  lgImg="atomicImprov.png"
-                  smImg="atomicImprovSm.png"
-                  name={work.name}
-                  description={work.description}
-                  key={index}
-                />
+                <div key={index} className="lg:grid grid-cols-10 mt-6">
+                  <span className="text-[6rem] md:text-[7rem] font-serif mt-3 sticky top-4 col-span-2 h-min">0{index+1}.</span>
+                  <WorksLayout
+                    a="mt-10 work-card col-span-7 col-end-[-1]"
+                    image="rounded-[1rem] mx-auto"
+                    h3="text-[2rem] font-serif mt-3"
+                    p=""
+                    link={work.link}
+                    lgImg="atomicImprov.png"
+                    smImg="atomicImprovSm.png"
+                    name={work.name}
+                    description={work.description}
+                  />
+                </div>
               )
             })}
           </div>
