@@ -32,7 +32,8 @@ module.exports = {
         "slow-spin": "slow-spin linear",
         'slide-down': 'slide-down linear',
         'enter-zoom': 'enter-zoom linear forwards',
-        'text-reveal': 'text-reveal cubic-bezier(0.4, 0, 0.2, 1) forwards'
+        'text-reveal': 'text-reveal cubic-bezier(0.4, 0, 0.2, 1) forwards',
+        'scroll-down': '2s scroll-down 1s cubic-bezier(0.4, 0, 0.2, 1) infinite '
       },
       keyframes: {
         "slide-up": {
@@ -65,6 +66,14 @@ module.exports = {
         'text-reveal': {
           '100%': {
             transform: 'translateY(0)'
+          }
+        },
+        'scroll-down': {
+          '0%': {
+            width: '0'
+          },
+          '100%': {
+            width: '5rem'
           }
         }
       }
