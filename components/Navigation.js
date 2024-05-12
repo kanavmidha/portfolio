@@ -8,8 +8,8 @@ export default function Navigation () {
             <ul>
                 {navLinks.map((link, index) => {
                     return (
-                        <li key={index}>
-                            <Link href={link.url} className="text-lg">{link.title}</Link>
+                        <li key={index} className="py-2">
+                            <Link href={link.url} className="text-lg xl:text-[1.5rem]">{link.title}</Link>
                         </li>
                     )
                 })}

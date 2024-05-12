@@ -11,6 +11,20 @@ html {
   fill: #fff;
 }
 
+.star, .intro {
+  animation-timeline: scroll();
+}
+
+#services {
+  animation-timeline: view();
+  animation-range-start: entry;
+}
+
+.animate-text-reveal {
+  animation-timeline: view();
+  animation-range-start: entry;
+}
+
 /* .work-card:nth-of-type(1) {
   grid-column: 1 / span 6;
 }

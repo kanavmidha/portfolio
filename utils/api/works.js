@@ -2,11 +2,15 @@ export const works = [
     {
         'name': 'Atomic Improv',
         'description': 'Placeholder',
-        'link': '/'
+        'link': '/',
+        'smImg': 'atomicImprovSm.png',
+        'lgImg': 'atomicImprov.png'
     },
     {
         'name': 'Anthony\'s',
         'description': 'Placeholder',
-        'link': '/'
+        'link': '/',
+        'smImg': 'anthonysSm.png',
+        'lgImg': 'anthonys.png'
     },
 ]
