@@ -1,5 +1,5 @@
 import "./globals.css";
-import { Archivo } from 'next/font/google';
+import {Archivo} from 'next/font/google';
 import localFont from 'next/font/local';
 
 const archivo = Archivo({
@@ -17,14 +17,26 @@ const clashDisplay = localFont({
 })
 
 export const metadata = {
-  title: "Kanav Midha - Freelance Developer",
-  description: "An enthusiastic freelancer web developer and designer based in Canada looking for opportunities across Canada.",
-};
+  title: {
+    template: '%s | Kanav Midha',
+    default: 'Kanav Midha'
+  },
+  description: 'An enthusiastic freelancer web developer and designer based in Canada looking for opportunities across Canada.',
+  icons: [
+    {
+      url: '/favicon.png',
+      rel: 'icon',
+      type: 'image/png',
+    }
+  ]
+}
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${archivo.variable} ${clashDisplay.variable}`}>
-      <body>{children}</body>
+        <body>
+          {children}
+        </body>
     </html>
   );
 }

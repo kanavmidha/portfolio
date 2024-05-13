@@ -7,11 +7,33 @@ html {
   scroll-behavior: smooth;
 }
 
-.custom-container {
-  padding: 0 8.75rem;
-}
-
 .logo svg {
   fill: #fff;
-  width: 4.375rem;
 }
+
+.star, .intro {
+  animation-timeline: scroll();
+}
+
+#services {
+  animation-timeline: view();
+  /* animation-range-start: entry; */
+}
+
+.animate-text-reveal {
+  animation-timeline: view();
+  animation-range-start: 150px;
+  animation-range-end: 300px;
+}
+
+.before\:animate-scroll-down::before {
+  transform-origin: top left;
+}
+
+/* .work-card:nth-of-type(1) {
+  grid-column: 1 / span 6;
+}
+
+.work-card:nth-of-type(2) {
+
+} */
