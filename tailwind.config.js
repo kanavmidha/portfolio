@@ -13,8 +13,8 @@ module.exports = {
         'xs': '430px'
       },
       colors: {
-        'jet': '#2A2A2A',
-        'night': '#0F0F0F',
+        'jet': '#3D3D3D',
+        'night': '#252525',
         'beige': '#F7EDD0',
         'off-white': '#D9D4AD',
       },

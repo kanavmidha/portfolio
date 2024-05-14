@@ -15,17 +15,6 @@ html {
   animation-timeline: scroll();
 }
 
-#services {
-  animation-timeline: view();
-  /* animation-range-start: entry; */
-}
-
-.animate-text-reveal {
-  animation-timeline: view();
-  animation-range-start: 150px;
-  animation-range-end: 300px;
-}
-
 .before\:animate-scroll-down::before {
   transform-origin: top left;
 }
