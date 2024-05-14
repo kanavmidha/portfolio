@@ -41,8 +41,8 @@ export default function Home() {
           <span className="absolute hidden xl:flex rotate-90 items-center text-jet text-xl right-[-7rem] bottom-[18rem] before:mr-3 before:flex before:w-20 before:fixed before:bg-jet before:h-1 before:left-[-6rem] before:animate-scroll-down">scroll to find out your brand solution</span>
         </section>
 
-        <section id="services" className="rounded-[2rem] bg-beige mt-8 px-8 sm:px-14 lg:px-20 text-black py-8 scale-90 animate-enter-zoom">
-          <h2 className="text-[2.5rem] xl:text-[4rem] font-serif uppercase overflow-clip"><span className="translate-y-20 animate-text-reveal inline-block">What I do.</span></h2>
+        <section id="services" className="rounded-[2rem] bg-beige mt-8 px-8 sm:px-14 lg:px-20 text-night py-8 scale-95 animate-enter-zoom">
+          <h2 className="text-[2.5rem] xl:text-[5rem] font-serif uppercase overflow-clip"><span className="translate-y-20 animate-text-reveal inline-block">What I do.</span></h2>
           <div className="mt-6 sm:grid grid-cols-10">
             <h3 className="text-[2rem] xl:text-[3rem] font-serif mb-3 col-span-full"><span className="mr-2">01.</span> Web Development</h3>
               <p className="mb-3 text-lg xl:text-2xl col-span-5 md:col-span-4">I create custom-coded websites as unique as your brand. I focus on usability, scalability, performance and accessibility to tailor the website to your specific brand needs.</p>
@@ -65,7 +65,7 @@ export default function Home() {
 
           <div className="mt-6 sm:grid grid-cols-10">
             <h3 className="text-[2rem] xl:text-[3rem] font-serif mb-3 col-span-full"><span className="mr-2">03.</span> SEO</h3>
-              <p className="mb-3 text-lg xl:text-2xl col-span-5 md:col-span-4">Your website also wants to be popular. I got you covered, again! SEO is very important for a website to reach audience, hence, I incorporate the best SEO practices making your brand gain more user traffic.</p>
+              <p className="mb-3 text-lg xl:text-2xl col-span-5 md:col-span-4">Your website also wants to be popular. I got that covered too! SEO is very important for a website to reach audience, hence, I incorporate the best SEO practices making your brand gain more user traffic.</p>
               <div className=" flex flex-col gap-3 col-end-[-1] col-span-3">
                 <span className="block text-[1.5rem] xl:text-[2.15rem] font-serif">Technical SEO</span>
                 <span className="block text-[1.5rem] xl:text-[2.15rem] font-serif">Page Optimization</span>
@@ -97,7 +97,7 @@ export default function Home() {
 
         <section id="about" className="py-8 px-8 sm:px-14 lg:px-20 text-beige">
           <h2 className="text-[2.5rem] xl:text-[4rem] font-serif uppercase mb-3">A little about me.</h2>
-          <p className="text-lg mb-6 xl:text-2xl">I aspire to provide digital design solutions for a diverse group including startups and well-known businesses.  With a passion for Design and Development, I take projects from ideation to production. Bringing websites to life and to more audience is my goal.</p>
+          <p className="text-lg mb-6 xl:text-2xl">I used to work as a graphic designer with my father in his office and it really attracted me to the digital world. Since then, I have had an eye for digital design. Later on, I discovered what programming is and I was absolutely amazed. Therefore, I found a field that was a mix of both, 'Web Design and Development. Hence, I recently graduated from NAIT with the DMIT diploma specialized in Web Design and Development. And now, I aspire to provide digital design solutions for a diverse group including startups and well-known businesses. With a passion for Design and Development, I take projects from ideation to production. Bringing websites to life and to more audience is my goal.</p>
 
           <div className="mb-6">
             <h3 className="text-[2rem] xl:text-[3rem] font-serif">my expertise</h3>
