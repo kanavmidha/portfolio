@@ -17,9 +17,9 @@ export default function Footer () {
                 </div>
                 <div className="flex flex-col mb-3">
                     <h3 className="text-[1.5rem] xl:text-[2.15rem] uppercase">Profile</h3>
-                    <Link href={'https://www.linkedin.com/in/kanav-midha-24781b259/'} className="text-lg xl:text-[1.5rem] py-2">LinkedIn</Link>
-                    <Link href={'https://github.com/kanavmidha'} className="text-lg xl:text-[1.5rem] py-2">Github</Link>
-                    <Link href={'/'} className="text-lg xl:text-[1.5rem] py-2">Resume</Link>
+                    <Link href={'https://www.linkedin.com/in/kanav-midha-24781b259/'} className="text-lg xl:text-[1.5rem] py-2 relative after:h-[2px] after:w-0 after:bg-night after:block after:absolute hover:after:w-full after:origin-bottom-left after:transition-all after:duration-[200ms] w-min">LinkedIn</Link>
+                    <Link href={'https://github.com/kanavmidha'} className="text-lg xl:text-[1.5rem] py-2 relative after:h-[2px] after:w-0 after:bg-night after:block after:absolute hover:after:w-full after:origin-bottom-left after:transition-all after:duration-[200ms] w-min">Github</Link>
+                    <Link href={'/'} className="text-lg xl:text-[1.5rem] py-2 relative after:h-[2px] after:w-0 after:bg-night after:block after:absolute hover:after:w-full after:origin-bottom-left after:transition-all after:duration-[200ms] w-min">Resume</Link>
                 </div>
             </div>
 

@@ -1,3 +1,5 @@
+import Header from "@/components/Header"
+
 export const metadata = {
     title: 'Contact',
     icons: [
@@ -12,6 +14,11 @@ export const metadata = {
 
 export default function Page () {
     return (
-        <h1>This is the contact page.</h1>
+        <>
+            <Header/>
+            <main>
+                <h2>You made the right decision. Let's get connected!</h2>
+            </main>
+        </>
     )
 }

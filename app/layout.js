@@ -34,9 +34,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${archivo.variable} ${clashDisplay.variable}`}>
-        <body>
+      <body>
+        <div className="bg-night text-white">
           {children}
-        </body>
+        </div>
+      </body>
     </html>
   );
 }

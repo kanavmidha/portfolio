@@ -29,7 +29,7 @@ export default function Home() {
 // }, [])
 
   return (
-    <div className="bg-night text-white">
+    <>
       <Header/>
       <main>
         {/* <div className="initial-screen flex justify-center items-center bg-black text-white flex-col gap-4 text-lg w-svw h-screen fixed top-0 left-0 animate-slide-up">
@@ -72,22 +72,26 @@ export default function Home() {
                 <span className="block text-[1.5rem] xl:text-[2.15rem] font-serif">SEO Audits & Analytics</span>
               </div>
           </div>
-          <div className="mt-8">
-            <h2 className="font-serif uppercase text-[2.5rem] xl:text-[4rem] col-span-full overflow-clip"><span className="translate-y-20 animate-text-reveal inline-block">My Works.</span></h2>
+          <div className="my-8">
+            <h2 className="font-serif uppercase text-[2.5rem] xl:text-[5rem] col-span-full overflow-clip"><span className="translate-y-20 animate-text-reveal inline-block">My Works.</span></h2>
             {works.map((work, index) => {
               return (
                 <div key={index} className="lg:grid grid-cols-10 mt-6">
-                  <span className="text-[6rem] md:text-[7rem] xl:text-[8.5rem] font-serif mt-3 lg:sticky top-4 col-span-2 h-min">0{index+1}.</span>
+                  <span className="text-[6rem] md:text-[7rem] xl:text-[9rem] font-serif mt-3 lg:sticky top-4 col-span-2 h-min">0{index+1}.</span>
                   <WorksLayout
                     a="mt-10 work-card col-span-7 col-end-[-1]"
                     image="rounded-[1rem] mx-auto"
-                    h3="text-[2rem] font-serif mt-3"
-                    p=""
+                    h3="text-[2rem] xl:text-[3rem] font-serif mt-3"
+                    p="text-xl"
                     link={work.link}
                     lgImg={work.lgImg}
                     smImg={work.smImg}
                     name={work.name}
-                    description={work.description}
+                    description={work.description.map((p, index)=>{
+                      return(
+                        <p className="text-2xl mt-3" key={index}>{p}</p>
+                      )
+                    })}
                   />
                 </div>
               )
@@ -96,8 +100,10 @@ export default function Home() {
         </section>
 
         <section id="about" className="py-8 px-8 sm:px-14 lg:px-20 text-beige">
-          <h2 className="text-[2.5rem] xl:text-[4rem] font-serif uppercase mb-3">A little about me.</h2>
-          <p className="text-lg mb-6 xl:text-2xl">I used to work as a graphic designer with my father in his office and it really attracted me to the digital world. Since then, I have had an eye for digital design. Later on, I discovered what programming is and I was absolutely amazed. Therefore, I found a field that was a mix of both, 'Web Design and Development. Hence, I recently graduated from NAIT with the DMIT diploma specialized in Web Design and Development. And now, I aspire to provide digital design solutions for a diverse group including startups and well-known businesses. With a passion for Design and Development, I take projects from ideation to production. Bringing websites to life and to more audience is my goal.</p>
+          <h2 className="text-[2.5rem] xl:text-[5rem] font-serif uppercase mb-3">A little about me.</h2>
+          <p className="text-lg mb-6 xl:text-2xl">I used to work as a graphic designer with my father in his office and it really attracted me to the digital world. Since then, I have had an eye for digital design. Later on, I discovered what programming is and I was absolutely amazed. Therefore, I found a field that was a mix of both, 'Web Design and Development.
+          </p>
+          <p className="text-lg mb-6 xl:text-2xl">Hence, I recently graduated from NAIT with the DMIT diploma specialized in Web Design and Development. And now, I aspire to provide digital design solutions for a diverse group including startups and well-known businesses. With a passion for Design and Development, I take projects from ideation to production. Bringing websites to life and to more audience is my goal.</p>
 
           <div className="mb-6">
             <h3 className="text-[2rem] xl:text-[3rem] font-serif">my expertise</h3>
@@ -130,6 +136,6 @@ export default function Home() {
         </section>
       </main>
       <Footer/>
-    </div>
+    </>
   );
 }
