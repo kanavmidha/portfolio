@@ -1,7 +1,9 @@
 import Link from "next/link"
 import Navigation from "./Navigation"
+import ScrollTop from "./ScrollTop"
 
 export default function Footer () {
+
     return (
         <footer className="bg-beige text-night px-8 py-8 sm:px-14 lg:px-20">
             <div className=" flex flex-col items-center max-xs:max-w-[25rem] sm:max-w-[37.75rem] md:max-w-[50rem] lg:max-w-[60rem] xl:max-w-[70rem] mx-auto">
@@ -23,10 +25,11 @@ export default function Footer () {
                 </div>
             </div>
 
-            <button className="py-3 px-4 w-max xl:text-2xl bg-black text-beige rounded-full ml-auto block">Back to Top <span className="w-min inline-block"><svg className="w-4 fill-beige ml-2" viewBox="0 0 33 25">
+            {/* <button className="scroll-top py-3 px-4 w-max xl:text-2xl bg-black text-beige rounded-full ml-auto block">Back to Top <span className="w-min inline-block"><svg className="w-4 fill-beige ml-2" viewBox="0 0 33 25">
                 <path d="M13.4357 1.84205L0.88686 20.3326C0.306928 21.1866 0 22.047 0 22.7621C0 24.1447 1.10003 25 2.94133 25L30.0629 25C31.9021 25 33 24.1458 33 22.7664C33 22.0502 32.6928 21.2035 32.1113 20.3477L19.5627 1.84852C18.7544 0.658838 17.6667 0 16.4985 0C15.3312 -0.000268936 14.2437 0.651024 13.4357 1.84205Z"/>
             </svg>
-</span></button>
+</span></button> */}
+            <ScrollTop/>
         </footer>
     )
 }
