@@ -7,10 +7,6 @@ html {
   scroll-behavior: smooth;
 }
 
-.logo svg {
-  fill: #fff;
-}
-
 .star, .intro {
   animation-timeline: scroll();
 }
