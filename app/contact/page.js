@@ -16,12 +16,13 @@ export const metadata = {
 
 export default function Page () {
     return (
-        <div className="bg-beige">
+        <div className="bg-beige text-night">
             <Header
                 logo='fill-night'
+                afterHover='after:bg-night'
             />
             <main className="pb-10">
-                <section className="px-6 h-[80vh] grid place-items-center">
+                <section className="px-6 h-[80vh] grid place-items-center pt-40">
                     <h2 className="font-serif text-[2rem] uppercase">You made the right decision - Let's get connected!</h2>
                 </section>
                 <section className="px-6"><ContactForm/></section>
@@ -29,6 +30,7 @@ export default function Page () {
             <Footer
                 background='bg-night text-beige'
                 buttonClass='bg-beige text-night'
+                afterHover='after:bg-beige'
             />
         </div>
     )

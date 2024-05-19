@@ -10,15 +10,15 @@ export default function ContactForm () {
     },[])
 
     return(
-        <form action="" method="POST">
+        <form action="" method="POST" className="text-night">
             <div className="flex flex-col text-lg font-sans">
                 <label for="name" >Your Name<span className="ml-1 text-red-600">*</span></label>
-                <input id="name" name="name" placeholder="John Doe" className="p-3 rounded-[8px] bg-transparent border-[1px] border-night border-opacity-50 mt-1 placeholder-night placeholder-opacity-50"/>
+                <input id="name" name="name" placeholder="John Doe" className="p-3 rounded-[8px] bg-transparent border-[1px] border-night border-opacity-50 mt-1 placeholder-night placeholder-opacity-50 focus-visible:outline-none focus-visible:bg-night focus-visible:bg-opacity-20"/>
             </div>
 
             <div className="mt-4 flex flex-col text-lg font-sans">
                 <label for="email">Your Email<span className="ml-1 text-red-600">*</span></label>
-                <input id="email" name="email" placeholder="john@doe.com" className="p-3 rounded-[8px] mt-1 bg-transparent border-[1px] border-night border-opacity-50 placeholder-night placeholder-opacity-50"/>
+                <input id="email" name="email" placeholder="john@doe.com" className="p-3 rounded-[8px] mt-1 bg-transparent border-[1px] border-night border-opacity-50 placeholder-night placeholder-opacity-50 focus-visible:outline-none focus-visible:bg-night focus-visible:bg-opacity-20"/>
             </div>
 
             <fieldset className="mt-4 text-lg font-sans flex flex-col">
@@ -38,12 +38,12 @@ export default function ContactForm () {
 
             <div className="mt-4 flex flex-col text-lg font-sans">
                 <label for="budget">My budget is<span className="text-red-600 ml-1">*</span></label>
-                <input name="budget" id="budget" placeholder="CAD 2000" className="rounded-[8px] mt-1 p-3 bg-transparent border-[1px] border-night border-opacity-50 placeholder-night placeholder-opacity-50"/>
+                <input name="budget" id="budget" placeholder="CAD 2000" className="rounded-[8px] mt-1 p-3 bg-transparent border-[1px] border-night border-opacity-50 placeholder-night placeholder-opacity-50 focus-visible:outline-none focus-visible:bg-night focus-visible:bg-opacity-20"/>
             </div>
 
             <div className="mt-4 flex flex-col text-lg font-sans">
                 <label for="details">More details about the project</label>
-                <textarea name="details" id="details" placeholder="Brief summary, timeline, goals etc." type="textarea" className="rounded-[8px] mt-1 p-3 bg-transparent border-[1px] border-night border-opacity-50 placeholder-night placeholder-opacity-50" />
+                <textarea name="details" id="details" placeholder="Brief summary, timeline, goals etc." type="textarea" className="rounded-[8px] mt-1 p-3 bg-transparent border-[1px] border-night border-opacity-50 placeholder-night placeholder-opacity-50 focus-visible:outline-none focus-visible:bg-night focus-visible:bg-opacity-20" />
             </div>
         </form>
     )

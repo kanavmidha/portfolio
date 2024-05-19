@@ -5,6 +5,7 @@ import WorksLayout from "@/components/WorksLayout";
 import { works } from "@/utils/api/works";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import { document } from "postcss";
 // import atomicImprov from "@/public/atomicImprov.png"
 // import { useEffect } from "react";
 
@@ -31,10 +32,10 @@ export default function Home() {
 // }, [])
 
   return (
-    <div className="bg-night text-white">
+    <div id="background" className="bg-night text-white">
       <Header
         logo='fill-white'
-        underlineColor='bg-white'
+        afterHover='after:bg-white'
       />
       <main>
         {/* <div className="initial-screen flex justify-center items-center bg-black text-white flex-col gap-4 text-lg w-svw h-screen fixed top-0 left-0 animate-slide-up">
@@ -143,7 +144,7 @@ export default function Home() {
       <Footer
         background='bg-beige text-night'
         buttonClass= 'bg-night text-beige'
-        underlineColor='bg-night'
+        afterHover='after:bg-night'
       />
     </div>
   );
