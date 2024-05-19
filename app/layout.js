@@ -35,9 +35,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${archivo.variable} ${clashDisplay.variable}`}>
       <body>
-        <div className="bg-night text-white">
           {children}
-        </div>
       </body>
     </html>
   );
