@@ -20,7 +20,7 @@ export default function Navigation (props) {
                 {navLinks.map((link, index) => {
                     return (
                         <li key={index} className="py-[0.15rem] lg:py-2">
-                            <Link ref={(l)=>{links.current[index]=l}} href={link.url} className="text-lg xl:text-[1.5rem] relative after:h-[2px] after:w-0 after:block after:absolute hover:after:w-full after:origin-bottom-left after:transition-all after:duration-[200ms]">{link.title}</Link>
+                            <Link ref={(l)=>{links.current[index]=l}} href={link.url} className="text-lg lg:text-[1.5rem] relative after:h-[2px] after:w-0 after:block after:absolute hover:after:w-full after:origin-bottom-left after:transition-all after:duration-[200ms]">{link.title}</Link>
                         </li>
                     )
                 })}

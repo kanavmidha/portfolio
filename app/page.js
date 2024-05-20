@@ -5,7 +5,6 @@ import WorksLayout from "@/components/WorksLayout";
 import { works } from "@/utils/api/works";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { document } from "postcss";
 // import atomicImprov from "@/public/atomicImprov.png"
 // import { useEffect } from "react";
 
