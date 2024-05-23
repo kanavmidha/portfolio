@@ -30,7 +30,7 @@ export default function ScrollTop (props) {
         }        
     },[])
 
-    const buttonClasses = `scroll-top py-3 px-4 w-max xl:text-2xl rounded-full ml-auto block ${props.buttonClass}`
+    const buttonClasses = `scroll-top py-3 px-4 w-max xl:text-2xl rounded-full ml-auto block hover:scale-[1.1] transition-all duration-[300ms] ${props.buttonClass}`
 
     return (
         <button className={buttonClasses}>Back to Top 

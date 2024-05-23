@@ -12,7 +12,7 @@ export default function Navigation (props) {
         links.current.forEach(link=>{
             link.classList.add(props.afterHover)
         })
-    },[])
+    },[props.afterHover])
 
     return ( 
         <nav>

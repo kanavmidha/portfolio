@@ -23,7 +23,7 @@ export default function Page () {
             />
             <main className="pb-10">
                 <section className="px-8 sm:px-14 h-[80vh] grid place-items-start pt-40">
-                    <h2 className="font-serif text-[2rem] my-auto uppercase sm:text-[3rem] lg:text-[4.5rem] max-sm:max-w-[22.25rem] sm:max-w-[38rem] lg:max-w-[50rem]">You made the right decision - Let's get connected!</h2>
+                    <h2 className="font-serif text-[2rem] my-auto uppercase sm:text-[3rem] lg:text-[4.5rem] max-sm:max-w-[22.25rem] sm:max-w-[38rem] lg:max-w-[50rem]">You made the right decision - Let&apos;s get connected!</h2>
                 </section>
                 <section className="px-8 sm:px-14"><ContactForm/></section>
             </main>
