@@ -11,17 +11,19 @@ export default function ViewCursor () {
         const cards = document.querySelectorAll('.work-card')
         
         const cursor = document.querySelector('.view-cursor')
-           
+
+        const scrollValue = (value) => {
+            value = window.scrollY
+            return value
+        }
+        console.log(scrollValue())
         const mouseMove = (e) => {
                 
             if (cursor) {
                 
-
-                // console.log(x,y)
-
-                const x = e.pageX - window.scrollX
-                const y = e.pageY - window.scrollY
-
+                const x = e.pageX
+                const y = e.pageY
+                // console.log(x,y, window.scrollY)
                 if (x && y) { setPosition({ top: y, left: x }) }
                 
 
@@ -30,12 +32,15 @@ export default function ViewCursor () {
                 }
             }
         }       
+
+        document.addEventListener('scroll', scrollValue)
             
         cards.forEach(card=>{
             card.addEventListener('mousemove', mouseMove)
         })
 
         return()=>{
+            document.removeEventListener('scroll', scrollValue)
             cards.forEach(card=>{
                 card.removeEventListener('mousemove', mouseMove)
             })
@@ -43,7 +48,7 @@ export default function ViewCursor () {
     }, [])
 
     return(
-        <div className="view-cursor hidden p-8 rounded-full bg-jet text-off-white absolute transition-all duration-[300ms]" style={{top:`${position.top}px`, left:`${position.left}px`, transitionTimingFunction: 'ease-in-out'}}>
+        <div className="view-cursor hidden p-8 rounded-full bg-jet text-off-white absolute duration-[200ms]" style={{top:`${position.top}px`, left:`${position.left}px`, transitionTimingFunction: 'ease-out'}}>
             <span className="absolute top-[30%] right-[25%]">view</span>
         </div>
     )

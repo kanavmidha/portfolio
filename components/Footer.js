@@ -39,9 +39,9 @@ export default function Footer (props) {
                     </div>
                     <div className="flex flex-col mb-3">
                         <h3 className="text-[1.5rem] xl:text-[2.15rem] uppercase">Profile</h3>
-                        <Link ref={(l)=>{link.current[1]=l}} href={'https://www.linkedin.com/in/kanav-midha-24781b259/'} className="text-lg lg:text-[1.5rem] py-[0.15rem] lg:py-2 relative after:h-[2px] after:w-0 after:block after:absolute hover:after:w-full after:origin-bottom-left after:transition-all after:duration-[200ms] w-min">LinkedIn</Link>
-                        <Link ref={(l)=>{link.current[2]=l}} href={'https://github.com/kanavmidha'} className="text-lg lg:text-[1.5rem] py-[0.15rem] lg:py-2 relative after:h-[2px] after:w-0 after:block after:absolute hover:after:w-full after:origin-bottom-left after:transition-all after:duration-[200ms] w-min">Github</Link>
-                        <Link ref={(l)=>{link.current[3]=l}} href={'/'} className="text-lg lg:text-[1.5rem] py-[0.15rem] lg:py-2 relative after:h-[2px] after:w-0 after:block after:absolute hover:after:w-full after:origin-bottom-left after:transition-all after:duration-[200ms] w-min">Resume</Link>
+                        <Link ref={(l)=>{link.current[1]=l}} href={'https://www.linkedin.com/in/kanav-midha-24781b259/'} target="_blank" className="text-lg lg:text-[1.5rem] py-[0.15rem] lg:py-2 relative after:h-[2px] after:w-0 after:block after:absolute hover:after:w-full after:origin-bottom-left after:transition-all after:duration-[200ms] w-min">LinkedIn</Link>
+                        <Link ref={(l)=>{link.current[2]=l}} href={'https://github.com/kanavmidha'} target="_blank" className="text-lg lg:text-[1.5rem] py-[0.15rem] lg:py-2 relative after:h-[2px] after:w-0 after:block after:absolute hover:after:w-full after:origin-bottom-left after:transition-all after:duration-[200ms] w-min">Github</Link>
+                        <Link ref={(l)=>{link.current[3]=l}} href={'#'} className="text-lg lg:text-[1.5rem] py-[0.15rem] lg:py-2 relative after:h-[2px] after:w-0 after:block after:absolute hover:after:w-full after:origin-bottom-left after:transition-all after:duration-[200ms] w-min">Resume</Link>
                     </div>
                 </div>
                 {/* <button className="scroll-top py-3 px-4 w-max xl:text-2xl bg-black text-beige rounded-full ml-auto block">Back to Top <span className="w-min inline-block"><svg className="w-4 fill-beige ml-2" viewBox="0 0 33 25">

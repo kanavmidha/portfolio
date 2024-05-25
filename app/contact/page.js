@@ -25,7 +25,10 @@ export default function Page () {
                 <section className="px-8 sm:px-14 h-[80vh] grid place-items-start pt-40">
                     <h2 className="font-serif text-[2rem] my-auto uppercase sm:text-[3rem] lg:text-[4.5rem] max-sm:max-w-[22.25rem] sm:max-w-[38rem] lg:max-w-[50rem]">You made the right decision - Let&apos;s get connected!</h2>
                 </section>
-                <section className="px-8 sm:px-14"><ContactForm/></section>
+                <section className="px-8 sm:px-14 lg:my-20 lg:mt-32">
+                    <p className="text-lg lg:text-2xl">The contact form is under development. It will be available soon!</p>
+                    <p className="text-lg mt-6 lg:mt-10 lg:text-2xl">Please email me at <span>kanavmiddha0001@gmail.com</span></p>
+                </section>
             </main>
             <Footer
                 background='bg-night text-beige'

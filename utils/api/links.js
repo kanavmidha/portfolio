@@ -5,15 +5,15 @@ export const navLinks = [
     },
     {
         title: 'Services',
-        url: '#services'
+        url: '/#services'
     },
     {
         title: 'Works',
-        url: '#works'
+        url: '/#works'
     },
     {
         title: 'About',
-        url: '#about'
+        url: '/#about'
     },
     {
         title: "Contact",
