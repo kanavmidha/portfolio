@@ -42,7 +42,7 @@ export default function Home() {
         </div> */}
         <section className="px-8 h-dvh grid place-items-center relative pt-36 ">
           <h2 className="intro animate-slide-down text-[3rem] uppercase font-serif text-center max-w-[33.12rem] mx-auto sm:text-[4rem] lg:text-[6rem] lg:max-w-[50rem] xl:text-[7rem] xl:max-w-[60rem]">Hi There, I&apos;m <span className="w-fit inline-block ml-2"><svg className="star w-9 sm:w-11 lg:w-16 xl:w-20 fill-white hidden xs:block animate-slow-spin" viewBox="0 0 64 64"><g><g><path d="M34.29,0H29.71V26.48L11,7.76,7.76,11,26.48,29.71H0v4.58H26.48L7.76,53,11,56.24,29.71,37.52V64h4.58V37.52L53,56.24,56.24,53,37.52,34.29H64V29.71H37.52L56.24,11,53,7.76,34.29,26.48Z" /></g></g></svg></span> Kanav Midha</h2>
-          <span className="absolute hidden xl:flex rotate-90 items-center text-jet text-xl right-[-7rem] bottom-[18rem] before:mr-3 before:flex before:w-20 before:fixed before:bg-jet before:h-1 before:left-[-6rem] before:animate-scroll-down">scroll to find out your brand solution</span>
+          <span className="absolute hidden xl:flex rotate-90 items-center text-jet text-lg right-[-5rem] bottom-[10rem] before:mr-3 before:rounded-full before:flex before:w-10 before:fixed before:bg-jet before:h-1 before:left-[-4.25rem] before:animate-scroll-down">scroll to find out your brand solution</span>
         </section>
 
         <section id="services" className="rounded-[2rem] bg-beige mt-8 px-8 sm:px-14 lg:px-20 text-night py-8 scale-95 animate-enter-zoom">

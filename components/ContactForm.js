@@ -13,8 +13,6 @@ export default function ContactForm () {
     const {values} = state
     // destructuring the values object from the state object so that we don't have to write state.values.value everytime
 
-    const [serviceValue, setServiceValue] = useState('')
-
     const handleChange = ({target}) => {
         setState((prev)=>({
             // prev referes to the previous stateful values 
@@ -25,6 +23,34 @@ export default function ContactForm () {
                 [target.name] : target.value,
             },
         }))
+    }
+
+    const submitData = async(e) =>{
+        setState((prev) => ({
+            ...prev,
+        }))
+        
+        e.preventDefault()
+
+        try {
+            const res = await fetch('/api/contact', {
+                method: "POST",
+                body: JSON.stringify(values),
+                headers: {
+                    'content-type': 'application/JSON'
+                }
+            })
+
+            if (res.ok) {
+                alert('Your message has been sent :)')
+            } else {
+                alert(`Error:${res.text()}`)
+            }
+        } catch (err) {
+            console.log(err)
+            alert('There was an error submitting your message :(')
+        }
+
     }
 
     useEffect(()=>{
@@ -41,7 +67,7 @@ export default function ContactForm () {
     },[])
 
     return(
-        <form action="" method="POST" className="text-night sm:max-w-[31.25rem]">
+        <form action="" method="POST" className="text-night sm:max-w-[31.25rem]" onSubmit={submitData}>
             <div className="flex flex-col text-lg font-sans">
                 <label for="name" >Your Name<span className="ml-1 text-red-600">*</span></label>
                 <input id="name" name="name" placeholder="John Doe" className="p-3 rounded-[8px] bg-transparent border-[1px] border-night border-opacity-50 mt-1 placeholder-night placeholder-opacity-50 focus-visible:outline-none focus-visible:bg-night focus-visible:bg-opacity-20" value={values.name} onChange={handleChange}/>
@@ -73,8 +99,8 @@ export default function ContactForm () {
             </div>
 
             <div className="mt-4 flex flex-col text-lg font-sans">
-                <label for="details">More details about the project...</label>
-                <textarea rows='4' name="details" id="details" placeholder="Brief summary, timeline, goals etc." type="textarea" className="rounded-[8px] mt-1 p-3 bg-transparent border-[1px] border-night border-opacity-50 placeholder-night placeholder-opacity-50 focus-visible:outline-none focus-visible:bg-night focus-visible:bg-opacity-20 transition-colors duration-[300ms]" value={values.message} onChange={handleChange} />
+                <label for="message">More details about the project...</label>
+                <textarea rows='4' name="message" id="message" placeholder="Brief summary, timeline, goals etc." type="textarea" className="rounded-[8px] mt-1 p-3 bg-transparent border-[1px] border-night border-opacity-50 placeholder-night placeholder-opacity-50 focus-visible:outline-none focus-visible:bg-night focus-visible:bg-opacity-20 transition-colors duration-[300ms]" value={values.message} onChange={handleChange} />
             </div>
 
             <div>
