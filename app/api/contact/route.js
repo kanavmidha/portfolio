@@ -8,7 +8,7 @@ import { NextResponse } from 'next/server'
 
 export async function POST(request) {
 
-    const values = await request.json()
+    const {values, service} = await request.json()
 
     const transporter = nodemailer.createTransport({
         service: 'Gmail',
@@ -25,7 +25,7 @@ export async function POST(request) {
         text: `
         Name: ${values.name}
         Email: ${values.email}
-        Services Requested: ${values.services}
+        Services Requested: ${service}
         Budget: ${values.budget}
         Message: ${values.message}`
     }
