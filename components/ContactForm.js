@@ -1,10 +1,45 @@
 'use client'
 import { useEffect, useState } from "react"
-import { useForm } from "react-hook-form"
 
 export default function ContactForm () {
 
-    const initValues = {name: '', email: '', services:'', budget: '', message: ''}
+    const [service, setService] = useState([])
+
+    const selectServices = ({target}) => {
+
+        const button = target.nextElementSibling
+        
+        if(target.checked) {
+            setService((prev)=>{
+                if(!prev){
+                    return [target.value]
+                } else {
+                    return [...prev, target.value]
+                }    
+            })
+
+            if(!(button.style.backgroundColor === '#252525')) {
+                button.style.backgroundColor = "#252525"
+                button.style.color = "#F7EDD0"
+                button.style.border = 'none'
+            }
+        }
+
+        if (!target.checked) {
+            if (service.includes(target.value)) {
+                setService(service.filter((s) => s !== target.value))
+            }
+
+            button.style.backgroundColor = ''
+            button.style.color = "#252525"
+            button.style.border = '1px solid #252525'
+            button.style.borderOpacity = '0.5'
+        }
+    }
+
+    
+
+    const initValues = {name: '', email: '', budget: '', message: ''}
 
     const initState = {values: initValues}
 
@@ -13,7 +48,7 @@ export default function ContactForm () {
     const {values} = state
     // destructuring the values object from the state object so that we don't have to write state.values.value everytime
 
-    const [serviceValue, setServiceValue] = useState('')
+    const finalValues = {values, service}
 
     const handleChange = ({target}) => {
         setState((prev)=>({
@@ -23,8 +58,36 @@ export default function ContactForm () {
             values: {
                 ...prev.values,
                 [target.name] : target.value,
-            },
+            }
         }))
+    }
+
+    const submitData = async(e) =>{
+        setState((prev) => ({
+            ...prev,
+        }))
+        
+        e.preventDefault()
+
+        try {
+            const res = await fetch('/api/contact', {
+                method: "POST",
+                body: JSON.stringify(finalValues),
+                headers: {
+                    'content-type': 'application/JSON'
+                }
+            })
+
+            if (res.ok) {
+                alert('Your message has been sent :)')
+            } else {
+                alert(`Error:${res.text()}`)
+            }
+        } catch (err) {
+            console.log(err)
+            alert('There was an error submitting your message :(')
+        }
+
     }
 
     useEffect(()=>{
@@ -38,10 +101,24 @@ export default function ContactForm () {
             label.classList.add('lg:text-2xl', 'mt-6', 'mb-2')
         })
 
+        /* const serviceButton = document.querySelectorAll('input[type=checkbox]+span')
+        
+        serviceButton.forEach((b)=>{
+            b.addEventListener('click', ()=>{
+                if(!b.classList.contains('bg-night', 'text-beige', 'border-none')) {
+                    b.style.backgroundColor = '#252525'
+                    b.style.color = '#F7EDD0'
+                    b.style.border = 'none'
+                } else {
+                    
+                }
+            })
+        }) */
+
     },[])
 
     return(
-        <form action="" method="POST" className="text-night sm:max-w-[31.25rem]">
+        <form action="" method="POST" className="text-night sm:max-w-[31.25rem]" onSubmit={submitData}>
             <div className="flex flex-col text-lg font-sans">
                 <label for="name" >Your Name<span className="ml-1 text-red-600">*</span></label>
                 <input id="name" name="name" placeholder="John Doe" className="p-3 rounded-[8px] bg-transparent border-[1px] border-night border-opacity-50 mt-1 placeholder-night placeholder-opacity-50 focus-visible:outline-none focus-visible:bg-night focus-visible:bg-opacity-20" value={values.name} onChange={handleChange}/>
@@ -54,16 +131,16 @@ export default function ContactForm () {
 
             <fieldset className="mt-4 text-lg lg:mt-10 font-sans flex flex-col gap-4 sm:flex-row">
                 <legend className="mb-2 lg:mb-4 lg:text-2xl">The service I am looking for (select multiple if needed)<span className="ml-1 text-red-600">*</span></legend>
-                <label><input id="web-development" name="services" type="checkbox" value="web-development" className="appearance-none border-none"/>
+                <label><input id="web-development" name="services" type="checkbox" value="web-development" className="appearance-none border-none" onChange={selectServices}/>
                     <span className="w-max rounded-[8px] lg:text-xl border-[1px] border-night border-opacity-50 p-3 inline-block cursor-pointer hover:bg-night hover:bg-opacity-20 focus:bg-night focus:bg-opacity-20">Web Development</span>
                 </label>
 
-                <label><input id="web-design" name="services" type="checkbox" value="web-design" className="appearance-none border-none" />
-                    <span className="w-max rounded-[8px] lg:text-xl border-[1px] border-night border-opacity-50 p-3 inline-block hover:bg-night hover:bg-opacity-20 focus:bg-night focus:bg-opacity-20">Web Design</span>
+                <label><input id="web-design" name="services" type="checkbox" value="web-design" className="appearance-none border-none" onChange={selectServices} />
+                    <span className="w-max rounded-[8px] lg:text-xl border-[1px] border-night border-opacity-50 p-3 inline-block hover:bg-night hover:bg-opacity-20 focus:bg-night focus:bg-opacity-20 cursor-pointer">Web Design</span>
                 </label>
 
-                <label><input id="logo-design" name="services" type="checkbox" value="logo-design" className="appearance-none border-none" />
-                    <span className="w-max rounded-[8px] lg:text-xl border-[1px] border-night border-opacity-50 p-3 inline-block hover:bg-night hover:bg-opacity-20 focus:bg-night focus:bg-opacity-20">Logo Design</span>
+                <label><input id="logo-design" name="services" type="checkbox" value="logo-design" className="appearance-none border-none" onChange={selectServices} />
+                    <span className="w-max rounded-[8px] lg:text-xl border-[1px] border-night border-opacity-50 p-3 inline-block hover:bg-night hover:bg-opacity-20 focus:bg-night focus:bg-opacity-20 cursor-pointer">Logo Design</span>
                 </label>
             </fieldset>
 
@@ -73,8 +150,8 @@ export default function ContactForm () {
             </div>
 
             <div className="mt-4 flex flex-col text-lg font-sans">
-                <label for="details">More details about the project...</label>
-                <textarea rows='4' name="details" id="details" placeholder="Brief summary, timeline, goals etc." type="textarea" className="rounded-[8px] mt-1 p-3 bg-transparent border-[1px] border-night border-opacity-50 placeholder-night placeholder-opacity-50 focus-visible:outline-none focus-visible:bg-night focus-visible:bg-opacity-20 transition-colors duration-[300ms]" value={values.message} onChange={handleChange} />
+                <label for="message">More details about the project...</label>
+                <textarea rows='4' name="message" id="message" placeholder="Brief summary, timeline, goals etc." type="textarea" className="rounded-[8px] mt-1 p-3 bg-transparent border-[1px] border-night border-opacity-50 placeholder-night placeholder-opacity-50 focus-visible:outline-none focus-visible:bg-night focus-visible:bg-opacity-20 transition-colors duration-[300ms]" value={values.message} onChange={handleChange} />
             </div>
 
             <div>

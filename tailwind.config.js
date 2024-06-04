@@ -73,7 +73,7 @@ module.exports = {
             width: '0'
           },
           '100%': {
-            width: '5rem'
+            width: '3.5rem'
           }
         }
       }
