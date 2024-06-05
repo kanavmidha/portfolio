@@ -80,6 +80,16 @@ export default function ContactForm () {
 
             if (res.ok) {
                 alert('Your message has been sent :)')
+
+                setState({values: {
+                    name: '',
+                    email: '',
+                    budget: '',
+                    message: ''
+                }})
+
+                setService([])
+
             } else {
                 alert(`Error:${res.text()}`)
             }
