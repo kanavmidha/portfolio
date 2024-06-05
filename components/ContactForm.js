@@ -111,20 +111,6 @@ export default function ContactForm () {
             label.classList.add('lg:text-2xl', 'mt-6', 'mb-2')
         })
 
-        /* const serviceButton = document.querySelectorAll('input[type=checkbox]+span')
-        
-        serviceButton.forEach((b)=>{
-            b.addEventListener('click', ()=>{
-                if(!b.classList.contains('bg-night', 'text-beige', 'border-none')) {
-                    b.style.backgroundColor = '#252525'
-                    b.style.color = '#F7EDD0'
-                    b.style.border = 'none'
-                } else {
-                    
-                }
-            })
-        }) */
-
     },[])
 
     return(
