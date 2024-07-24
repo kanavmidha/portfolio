@@ -2,8 +2,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WorksLayout from "@/components/WorksLayout";
 import { works } from "@/utils/api/works";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
 import ViewCursor from "@/components/ViewCursor";
 // import atomicImprov from "@/public/atomicImprov.png"
 
