@@ -9,13 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.1",
+    "@studio-freight/react-lenis": "^0.0.47",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.3.18",
     "gsap": "^3.12.5",
-    "lenis": "^1.0.45",
+    "lenis": "^1.1.9",
     "next": "14.2.2",
     "nodemailer": "^6.9.13",
     "react": "^18",
     "react-dom": "^18",
-    "react-hook-form": "^7.51.5"
+    "react-hook-form": "^7.51.5",
+    "react-hot-toast": "^2.4.1"
   },
   "devDependencies": {
     "eslint": "^8",

@@ -1,6 +1,6 @@
-import Header from "@/components/Header"
+import Header from "@/components/header/Header"
 import ContactForm from "@/components/ContactForm"
-import Footer from "@/components/Footer"
+import Footer from "@/components/footer/Footer"
 
 export const metadata = {
     title: 'Contact',
@@ -32,9 +32,8 @@ export default function Page () {
                 </section>
             </main>
             <Footer
-                background='bg-night text-beige'
-                buttonClass='bg-beige text-night lg:w-[11.25rem] lg:text-xl'
-                afterHover='after:bg-beige'
+                backgroundColor='bg-night text-beige'
+                location='contact'
             />
         </div>
     )

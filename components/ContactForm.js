@@ -117,12 +117,12 @@ export default function ContactForm () {
         <form action="" method="POST" className="text-night sm:max-w-[31.25rem]" onSubmit={submitData}>
             <div className="flex flex-col text-lg font-sans">
                 <label for="name" >Your Name<span className="ml-1 text-red-600">*</span></label>
-                <input id="name" name="name" placeholder="John Doe" className="p-3 rounded-[8px] bg-transparent border-[1px] border-night border-opacity-50 mt-1 placeholder-night placeholder-opacity-50 focus-visible:outline-none focus-visible:bg-night focus-visible:bg-opacity-20" value={values.name} onChange={handleChange}/>
+                <input type="text" id="name" name="name" placeholder="John Doe" className="p-3 rounded-[8px] bg-transparent border-[1px] border-night border-opacity-50 mt-1 placeholder-night placeholder-opacity-50 focus-visible:outline-none focus-visible:bg-night focus-visible:bg-opacity-20" value={values.name} onChange={handleChange}/>
             </div>
 
             <div className="mt-4 flex flex-col text-lg font-sans">
                 <label for="email">Your Email<span className="ml-1 text-red-600">*</span></label>
-                <input id="email" name="email" placeholder="john@doe.com" className="p-3 rounded-[8px] mt-1 bg-transparent border-[1px] border-night border-opacity-50 placeholder-night placeholder-opacity-50 focus-visible:outline-none focus-visible:bg-night focus-visible:bg-opacity-20" value={values.email} onChange={handleChange} />
+                <input type="email" id="email" name="email" placeholder="john@doe.com" className="p-3 rounded-[8px] mt-1 bg-transparent border-[1px] border-night border-opacity-50 placeholder-night placeholder-opacity-50 focus-visible:outline-none focus-visible:bg-night focus-visible:bg-opacity-20" value={values.email} onChange={handleChange} />
             </div>
 
             <fieldset className="mt-4 text-lg lg:mt-10 font-sans flex flex-col gap-4 sm:flex-row">
@@ -142,7 +142,7 @@ export default function ContactForm () {
 
             <div className="mt-4 flex flex-col text-lg font-sans">
                 <label for="budget">My budget is<span className="text-red-600 ml-1">*</span></label>
-                <input name="budget" id="budget" placeholder="CAD 2000" className="rounded-[8px] mt-1 p-3 bg-transparent border-[1px] border-night border-opacity-50 placeholder-night placeholder-opacity-50 focus-visible:outline-none focus-visible:bg-night focus-visible:bg-opacity-20" value={values.budget} onChange={handleChange} />
+                <input type="number" name="budget" id="budget" placeholder="CAD 2000" className="rounded-[8px] mt-1 p-3 bg-transparent border-[1px] border-night border-opacity-50 placeholder-night placeholder-opacity-50 focus-visible:outline-none focus-visible:bg-night focus-visible:bg-opacity-20" value={values.budget} onChange={handleChange} />
             </div>
 
             <div className="mt-4 flex flex-col text-lg font-sans">

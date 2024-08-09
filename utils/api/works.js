@@ -13,7 +13,7 @@ export const works = [
         'description': ['A food blog landing page mockup. The goal of this project was to test various UI/UX techniques and elemets.',
             'This design was created using Figma. I implemented the use of components, local variables, and a column grid to make the process easier.',
             'I was able to understand how to design according to a genre, content writing, SEO practices such as concise and clear CTA\'s and using interactive elements.'],
-        'link': '/',
+        'link': 'https://github.com/kanavmidha/anthonys',
         'smImg': 'anthonysSm.png',
         'lgImg': 'anthonys.png'
     },

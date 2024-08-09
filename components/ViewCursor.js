@@ -1,56 +1,81 @@
 'use client'
-import { useEffect, useState } from "react"
-
-
+import {useRef, useState, useEffect } from "react"
+import gsap from "gsap"
 
 export default function ViewCursor () {
 
-    const [position, setPosition] = useState({top: 0, left: 0, client: 0})
+    const cursor = useRef()
     
+
+    const [position, setPosition] = useState({top: 0, left: 0})
+
+    
+    // const cursor = document.querySelector('.view-cursor')
+
+    // const scrollValue = window.scrollY
+
+    // console.log(scrollValue())
     useEffect(()=>{
         const cards = document.querySelectorAll('.work-card')
-        
-        const cursor = document.querySelector('.view-cursor')
 
-        // const scrollValue = window.scrollY
-
-        // console.log(scrollValue())
         const mouseMove = (e) => {
-                
+                    
             if (cursor) {
                 
-                const x = e.pageX
-                const y = e.pageY
-                const client = e.clientY
+                const x = e.clientX
+                const y = e.clientY
 
                 // console.log(x,y, window.scrollY)
-                if (x && y) { setPosition({ top: y, left: x, client: client }) }
+                if (x && y) { setPosition({ top: y, left: x}) }
                 
 
-                if(cursor.classList.contains('hidden')) {
-                    cursor.classList.replace('hidden', 'block')
-                }
+                /* if(cursor.current.classList.contains('hidden')) {
+                    cursor.current.classList.replace('hidden', 'block')
+                } */
+                
             }
+
+            gsap.to(cursor.current, {
+                scale: 1,
+                display: 'block',
+                top: position.top,
+                left: position.left,
+                duration: 0.3,
+                ease: 'power3'
+            })
+
+            // cursor.current.style.top = `${position.top - 20}px`
+            // cursor.current.style.left = `${position.left}px`
         }
 
-        if (position) {
-            cursor.style.top = `${position.top}px`
-            cursor.style.left = `${position.left}px`
-        } 
-            
-        cards.forEach(card=>{
-            card.addEventListener('mousemove', mouseMove)
-        })
-
-        return()=>{
-            cards.forEach(card=>{
-                card.removeEventListener('mousemove', mouseMove)
+        const mouseLeave = () => {
+            gsap.to(cursor.current, {
+                transform: 'scale(0)',
+                display: 'hidden',
+                duration: 0.3,
+                ease: 'power3'
             })
         }
-    }, [position])
+
+
+        cards.forEach(card=>{
+            card.addEventListener('mousemove', mouseMove)
+            card.addEventListener('mouseleave', mouseLeave)
+        })
+
+
+        return()=>{
+            cards.forEach((card)=>{
+                card.removeEventListener('mousemove',mouseMove)
+                card.removeEventListener('mouseleave',mouseLeave)
+            })
+        }
+    },[position, cursor])
+        
+
 
     return(
-        <div className="view-cursor hidden p-8 rounded-full bg-jet text-off-white fixed duration-[200ms] pointer-events-none">
+        <div ref={cursor} className="view-cursor p-8 rounded-full bg-jet text-off-white fixed duration-[200ms] pointer-events-none">
             <span className="absolute top-[30%] right-[25%]">view</span>
         </div>
     )
