@@ -1,12 +1,14 @@
+import ToasterProvider from "@/components/providers/ToasterProvider";
 import "./globals.css";
 import {Archivo} from 'next/font/google';
 import localFont from 'next/font/local';
+import SmoothScrolling from "@/components/SmoothScrolling";
 
 const archivo = Archivo({
   subsets:['latin'],
   display: 'swap',
   variable: '--font-archivo',
-  weight: '600'
+  weight: '400'
 })
 
 const clashDisplay = localFont({
@@ -35,7 +37,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${archivo.variable} ${clashDisplay.variable}`}>
       <body>
-          {children}
+          <ToasterProvider/>
+          <SmoothScrolling>
+            {children}
+          </SmoothScrolling>
       </body>
     </html>
   );

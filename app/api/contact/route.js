@@ -23,11 +23,12 @@ export async function POST(request) {
         to: 'kanavmiddha0001@gmail.com',
         subject: `New Contact form submission from ${values.name}`,
         text: `
-        Name: ${values.name}
-        Email: ${values.email}
-        Services Requested: ${service}
-        Budget: ${values.budget}
-        Message: ${values.message}`
+            Name: ${values.name}
+            Email: ${values.email}
+            Services Requested: ${service}
+            Budget: ${values.budget}
+            Message: ${values.message}
+        `
     }
 
     try {

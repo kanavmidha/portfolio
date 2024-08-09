@@ -1,5 +1,3 @@
-const { transform } = require('next/dist/build/swc');
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -15,8 +13,9 @@ module.exports = {
       colors: {
         'jet': '#3D3D3D',
         'night': '#252525',
-        'beige': '#F7EDD0',
+        'beige': '#CDC7B4',
         'off-white': '#D9D4AD',
+        'white': '#BCBCBC',
       },
       fontFamily: {
         sans: ['var(--font-archivo)'],
@@ -52,7 +51,8 @@ module.exports = {
         },
         'slide-down': {
           '25%': {
-            transform: 'translateY(150px)'
+            transform: 'translateY(150px) scale(0.9)',
+            opacity: '0.5'
           }
         },
         'enter-zoom': {
