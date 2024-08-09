@@ -33,10 +33,9 @@ export default function WorksLayout ({
                 </picture>
                 <div className="flex flex-row gap-2 py-2">
                     {role && (
-                        role.map((r)=>{
+                        role.map((r,index)=>{
                             return (
-                                
-                                <div className="px-2 py-1 bg-night text-white font-light border border-white rounded-full inline-block">{r}</div>
+                                <div key={index} className="px-2 py-1 bg-night text-white font-light border border-white rounded-full inline-block">{r}</div>
                                 
                             )
                         })    
