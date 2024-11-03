@@ -94,11 +94,6 @@ export default function Home() {
                       smImg={work.smImg}
                       name={work.name}
                       role={["Design", "Development"]}
-                      description={work.description.map((p, index)=>{
-                        return(
-                          <p className="text-lg mt-3" key={index}>{p}</p>
-                        )
-                      })}
                     />
                   </div>
                 )
