@@ -2,9 +2,7 @@
 import { navLinks } from "@/utils/api/links"
 import CustomLink from "../CustomLink"
 
-export default function Navigation ({
-    location
-}) {
+export default function Navigation () {
 
 
     return (
@@ -29,7 +27,7 @@ export default function Navigation ({
                             font-semibold">
                             <CustomLink
                                 path={link.url}
-                                location={location}
+                                interactiveClasses={'hover:after:bg-night focus-within:after:bg-night active:after:bg-night'}
                                 title={link.title}
                             />
                         </li>
