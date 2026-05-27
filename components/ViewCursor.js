@@ -75,7 +75,7 @@ export default function ViewCursor () {
 
 
     return(
-        <div ref={cursor} className="view-cursor p-8 rounded-full bg-jet text-off-white fixed duration-[200ms] pointer-events-none">
+        <div ref={cursor} className="view-cursor sm:hidden lg:block p-8 rounded-full bg-jet text-off-white fixed duration-[200ms] pointer-events-none">
             <span className="absolute top-[30%] right-[25%]">view</span>
         </div>
     )
