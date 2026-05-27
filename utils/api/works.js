@@ -25,6 +25,7 @@ export const works = [
     {
         'name': 'Airbnb Clone',
         'link': 'https://rent-app-example-plum.vercel.app/',
-        'lgImg': 'airbnb.png'
+        'lgImg': 'airbnb.png',
+        'smImg': 'airbnbSm.jpeg'
     }    
 ]
